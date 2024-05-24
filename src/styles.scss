@@ -1,0 +1,9 @@
+@import 'assets/resetBaseStyles.scss';
+@import 'assets/variables.scss';
+
+
+body {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+}
