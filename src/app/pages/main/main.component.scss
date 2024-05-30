@@ -1,0 +1,35 @@
+.hero-image {
+  width: 100%;
+}
+
+.content-section {
+  padding-top: var(--section-indent);
+  padding-bottom: var(--section-indent);
+
+  &__container {
+    margin: auto;
+    padding-left: var(--conteiner-indent);
+    padding-right: var(--conteiner-indent);
+    max-width: var(--container-width);
+  }
+
+  &__title {
+    margin-bottom: var(--title-indent);
+  }
+}
+
+.title {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-medium);
+
+  &--bold {
+    font-weight: var(--font-weight-bold);
+  }
+}
+
+.about-subtitle {
+  font-size: var(--font-size-l);
+  font-weight: var(--font-weight-medium);
+  letter-spacing: var(--letter-spacing-about-subtitle);
+  max-width: var(--about-subtitle-max-width);
+}

@@ -2,6 +2,9 @@ import { NavigationItem } from '../../../../core/models/navigation/navigationIte
 
 export const NAVIGATION_ITEMS: NavigationItem[] = [
   {
+    title: 'О нас'
+  },
+  {
     title: 'Афиши',
   },
   {
