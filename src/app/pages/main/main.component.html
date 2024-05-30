@@ -23,5 +23,24 @@
       </ul>
     </div>
   </section>
-
+  <section class="content-section">
+    <div class="content-section__container">
+      <h2 class="title content-section__title">Мы на карте</h2>
+      <img src="assets/images/map.jpg">
+    </div>
+  </section>
+  <section class="content-section">
+    <div class="content-section__container">
+      <h2 class="title content-section__title">Наши тренеры</h2>
+      <ul class="coaches--list">
+        <li>
+          @for (coach of coacheslist; track coach.name) {
+            <li>
+              <app-coach-card/>
+            </li>
+          }
+        </li>
+      </ul>
+    </div>
+  </section>
 </app-layout>
