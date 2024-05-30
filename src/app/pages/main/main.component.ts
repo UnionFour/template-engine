@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { LayoutComponent } from './layout/layout.component';
 import { NgOptimizedImage } from '@angular/common';
-import { CardComponent } from '../../shared/card/card.component';
 import { PosterCardComponent } from './poster-card/poster-card.component';
+import { posterslist } from '../../core/mock';
 
 @Component({
   selector: 'app-main',
@@ -10,12 +10,11 @@ import { PosterCardComponent } from './poster-card/poster-card.component';
   imports: [
     LayoutComponent,
     NgOptimizedImage,
-    CardComponent,
     PosterCardComponent
   ],
   templateUrl: './main.component.html',
   styleUrl: './main.component.scss'
 })
 export class MainComponent {
-
+  public postersList = posterslist;
 }
