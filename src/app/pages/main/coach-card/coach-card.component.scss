@@ -1,6 +1,31 @@
 .coach-card {
+  display: flex;
+  gap: 18px;
   padding: var(--card-indent);
   box-shadow: var(--card-box-shadow);
-  max-width: 356px;
-  height: 366px;
+  max-width: 542px;
+  height: 281px;
+  
+  &__name {
+    font-size: var(--font-size-l-2);
+    font-weight: var(--font-weight-medium);
+    line-height: var(--line-height-l);
+    margin-bottom: 8px;
+  }
+
+  &__specialization {
+    font-size: var(--font-size-s);
+    font-weight: var(--font-weight-regular);
+    line-height: var(--line-height-s);
+    color: var(--color-dark-gray);
+    margin-bottom: 8px;
+  }
+
+  &__about {
+    font-size: var(--font-size-s);
+    font-weight: var(--font-weight-regular);
+    line-height: var(--line-height-s);
+    max-height: 129px;
+    overflow: hidden;
+  }
 }

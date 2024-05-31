@@ -1,7 +1,9 @@
 <div class="coach-card">
-  <img class="coach-card__image" src="assets/images/coach.jpg">
-  <h3 class="coach-card__name">Иванов Иван Иванович</h3>
-  <p class="coach-card__specialization">Бег на короткие и длинные дистанции</p>
-  <p class="coach-card-about">Опытный тренер по бегу с фокусом на достижение результатов и развитие спортивного потенциала. </p>
+  <img [src]="coach.img">
+  <div>
+    <h3 class="coach-card__name">{{coach.name}}</h3>
+    <p class="coach-card__specialization">{{coach.specialization}}</p>
+    <p class="coach-card__about">{{coach.about}}</p>
+  </div>
 </div>
 

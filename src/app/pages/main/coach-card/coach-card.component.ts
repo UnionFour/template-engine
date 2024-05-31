@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Coach } from '../../../core/models/coach';
 
 @Component({
   selector: 'app-coach-card',
@@ -9,5 +10,5 @@ import { Component } from '@angular/core';
   styleUrl: './coach-card.component.scss'
 })
 export class CoachCardComponent {
-
+  @Input() coach!: Coach;
 }
