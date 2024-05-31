@@ -1,0 +1,51 @@
+.service-card {
+  display: grid;
+  grid-template-columns: 6fr 4fr;
+  gap: 2px 40px;
+  padding: var(--card-indent);
+  box-shadow: var(--card-box-shadow);
+  max-width: 1104px;
+  height: 162px;
+
+  &__title {
+    font-size: var(--font-size-l-2);
+    font-weight: var(--font-weight-medium);
+    line-height: var(--line-height-l);
+  }
+
+  &__address-block {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px
+  }
+
+  &__address {
+    font-size: var(--font-size-s);
+    font-weight: var(--font-weight-medium);
+    line-height: var(--line-height-s);
+  }
+
+  &__about {
+    font-size: var(--font-size-s);
+    font-weight: var(--font-weight-regular);
+    line-height: var(--line-height-s);
+  }
+
+  &__button {
+    align-self: end;
+    justify-self: start;
+  }
+}
+
+.button {
+  font-size: var(--font-size-s);
+  font-weight: var(--font-weight-bold);
+  background-color: var(--color-light-gray);
+  height: var(--button-height);
+  padding: 0 136px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: var(--color-medium-gray);
+}

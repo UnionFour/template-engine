@@ -2,8 +2,9 @@ import { Component } from '@angular/core';
 import { LayoutComponent } from './layout/layout.component';
 import { NgOptimizedImage } from '@angular/common';
 import { PosterCardComponent } from './poster-card/poster-card.component';
-import { coacheslist, posterslist } from '../../core/mock';
+import { coacheslist, posterslist, servicesList } from '../../core/mock';
 import { CoachCardComponent } from './coach-card/coach-card.component';
+import { ServiceCardComponent } from './service-card/service-card.component';
 
 @Component({
   selector: 'app-main',
@@ -12,7 +13,8 @@ import { CoachCardComponent } from './coach-card/coach-card.component';
     LayoutComponent,
     NgOptimizedImage,
     PosterCardComponent,
-    CoachCardComponent
+    CoachCardComponent,
+    ServiceCardComponent
   ],
   templateUrl: './main.component.html',
   styleUrl: './main.component.scss'
@@ -20,4 +22,5 @@ import { CoachCardComponent } from './coach-card/coach-card.component';
 export class MainComponent {
   public postersList = posterslist;
   protected readonly coacheslist = coacheslist;
+  protected readonly servicesList = servicesList;
 }

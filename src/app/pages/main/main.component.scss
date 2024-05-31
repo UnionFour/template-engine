@@ -37,11 +37,17 @@
 
 .posters-list {
   display: flex;
-  gap: 18px
+  gap: var(--distance-between-cards-m);
 }
 
 .coaches-list {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
+  gap: var(--distance-between-cards-l);
+}
+
+.services--list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--distance-between-cards-l);
 }
