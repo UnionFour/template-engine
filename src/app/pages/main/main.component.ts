@@ -5,6 +5,7 @@ import { PosterCardComponent } from './poster-card/poster-card.component';
 import { coacheslist, posterslist, servicesList } from '../../core/mock';
 import { CoachCardComponent } from './coach-card/coach-card.component';
 import { ServiceCardComponent } from './service-card/service-card.component';
+import { PostersCarouselComponent } from './posters-carousel/posters-carousel.component';
 
 @Component({
   selector: 'app-main',
@@ -14,7 +15,8 @@ import { ServiceCardComponent } from './service-card/service-card.component';
     NgOptimizedImage,
     PosterCardComponent,
     CoachCardComponent,
-    ServiceCardComponent
+    ServiceCardComponent,
+    PostersCarouselComponent
   ],
   templateUrl: './main.component.html',
   styleUrl: './main.component.scss'
