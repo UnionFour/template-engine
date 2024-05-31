@@ -11,6 +11,9 @@
         ></ya-placemark>
     </ya-map>
     <div class="addresses">
-
+        <div *ngFor="let point of points; let last = last" class="address">
+            <p [innerHTML]="point.properties.balloonContentBody"></p>
+            <hr *ngIf="!last">
+        </div>
     </div>
 </div>

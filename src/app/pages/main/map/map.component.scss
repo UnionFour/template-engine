@@ -13,5 +13,17 @@
         height: 386px;
         width: 212px;
         background: #FFFFFF;
+        overflow-y: scroll;
+        scrollbar-width: none;
+        padding: 15px;
+        cursor: pointer;
+
+        p {
+            margin-top: 10px;
+
+            &:last-child {
+                margin-bottom: 30px;
+            }
+        }
     }
 }
