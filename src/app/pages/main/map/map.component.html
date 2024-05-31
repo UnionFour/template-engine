@@ -1,0 +1,16 @@
+<div class="container">
+    <ya-map
+            [center]="[56.842080028192726,60.65064103131453]"
+            [zoom]="15"
+            [state]="{ controls: [] }"
+    >
+        <ya-placemark *ngFor="let point of points"
+                      [geometry]="point.coords"
+                      [properties]="point.properties"
+                      [options]="{ preset: 'islands#redDotIcon' }"
+        ></ya-placemark>
+    </ya-map>
+    <div class="addresses">
+
+    </div>
+</div>
