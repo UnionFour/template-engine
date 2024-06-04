@@ -1,6 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Service } from '../../../core/models/service';
-
+import { Service } from '../../../../../core/models/services/service';
 @Component({
   selector: 'app-service-card',
   standalone: true,
@@ -9,5 +8,5 @@ import { Service } from '../../../core/models/service';
   styleUrl: './service-card.component.scss'
 })
 export class ServiceCardComponent {
-  @Input() service!: Service;
+  @Input() public service!: Service;
 }

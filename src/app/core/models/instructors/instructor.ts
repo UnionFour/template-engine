@@ -1,5 +1,5 @@
 export type Instructor = {
-  "name": string,
-  "sportType": string,
-  "info": string
+  name: string,
+  sportType: string,
+  info: string
 }

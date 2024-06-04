@@ -1,0 +1,7 @@
+<ul class="services--list">
+  @for (service of servicesList; track service.sportType) {
+    <li>
+      <app-service-card [service]="service"/>
+    </li>
+  }
+</ul>

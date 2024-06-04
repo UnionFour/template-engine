@@ -4,16 +4,5 @@
   <app-news-section [newsSection]="config.news"/>
   <app-map-section [mapSection]="config.addresses"/>
   <app-instructors-section [instructorSection]="config.instructors"/>
-  <section class="content-section">
-    <div class="content-section__container">
-      <h2 class="title content-section__title">Наши услуги</h2>
-      <ul class="services--list">
-        @for (service of servicesList; track service.title) {
-          <li>
-            <app-service-card [service]="service"/>
-          </li>
-        }
-      </ul>
-    </div>
-  </section>
+  <app-services-section [servicesSection]="config.services"/>
 </app-layout>

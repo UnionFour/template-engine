@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
-import { Coach } from '../../../../core/models/coach';
-import { Instructor } from '../../../../core/models/instructors/instructor';
+import { Coach } from '../../../../../core/models/coach';
+import { Instructor } from '../../../../../core/models/instructors/instructor';
 
 @Component({
   selector: 'app-instructor-card',

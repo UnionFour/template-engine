@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { InstructorCardComponent } from '../instructor-card/instructor-card.component';
+import { InstructorCardComponent } from './instructor-card/instructor-card.component';
 import { Instructor } from '../../../../core/models/instructors/instructor';
 
 @Component({

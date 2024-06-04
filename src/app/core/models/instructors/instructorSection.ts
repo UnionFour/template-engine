@@ -1,6 +1,6 @@
 import { Instructor } from './instructor';
 
 export type InstructorSection = {
-  "title": string,
-  "instructors": Instructor[]
+  title: string,
+  instructors: Instructor[]
 }

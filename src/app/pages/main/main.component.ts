@@ -2,8 +2,8 @@ import { Component, DestroyRef, inject, OnInit } from '@angular/core';
 import { LayoutComponent } from './layout/layout.component';
 import { NgIf, NgOptimizedImage } from '@angular/common';
 import { coacheslist, posterslist, servicesList } from '../../core/mock';
-import { InstructorCardComponent } from './instructors-section/instructor-card/instructor-card.component';
-import { ServiceCardComponent } from './service-card/service-card.component';
+import { InstructorCardComponent } from './instructors-section/instructors-list/instructor-card/instructor-card.component';
+import { ServiceCardComponent } from './services-section/services-list/service-card/service-card.component';
 import { MapModule } from "./map-section/map/map.module";
 import  config  from '../../../../config.json';
 import { NewsCardComponent } from './news-section/news-carousel/news-card/news-card.component';
@@ -13,6 +13,7 @@ import { AboutSectionComponent } from './about-section/about-section.component';
 import { HeroImageSectionComponent } from './hero-image-section/hero-image-section.component';
 import { MapSectionComponent } from './map-section/map-section.component';
 import { InstructorsSectionComponent } from './instructors-section/instructors-section.component';
+import { ServicesSectionComponent } from './services-section/services-section.component';
 
 @Component({
   selector: 'app-main',
@@ -30,7 +31,8 @@ import { InstructorsSectionComponent } from './instructors-section/instructors-s
     AboutSectionComponent,
     HeroImageSectionComponent,
     MapSectionComponent,
-    InstructorsSectionComponent
+    InstructorsSectionComponent,
+    ServicesSectionComponent
   ],
   templateUrl: './main.component.html',
   styleUrl: './main.component.scss'
