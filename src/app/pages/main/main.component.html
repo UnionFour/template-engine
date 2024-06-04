@@ -8,7 +8,7 @@
   <section *ngIf="config.main" class="content-section">
     <div class="content-section__container">
       <h2 class="title title--bold content-section__title">{{config.main.title}}</h2>
-      <h3 class="about-subtitle content-section__about-subtitle">{{config.main.text}}</h3>
+      <div [innerHTML]="config.main.text"></div>
     </div>
   </section>
   <app-news-section [newsSection]="config.news"/>
