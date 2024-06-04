@@ -9,6 +9,7 @@ import  config  from '../../../../config.json';
 import { NewsCardComponent } from './news-section/news-carousel/news-card/news-card.component';
 import { NewsCarouselComponent } from './news-section/news-carousel/news-carousel.component';
 import { NewsSectionComponent } from './news-section/news-section.component';
+import { MainSectionComponent } from './about-section/main-section.component';
 
 @Component({
   selector: 'app-main',
@@ -22,7 +23,8 @@ import { NewsSectionComponent } from './news-section/news-section.component';
     MapModule,
     NewsCarouselComponent,
     NgIf,
-    NewsSectionComponent
+    NewsSectionComponent,
+    MainSectionComponent
   ],
   templateUrl: './main.component.html',
   styleUrl: './main.component.scss'

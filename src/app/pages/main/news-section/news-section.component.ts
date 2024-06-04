@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { ContentSectionComponent } from '../../../shared/components/content-section/content-section.component';
-import { ContainerComponent } from '../../../shared/components/conteiner/container.component';
+import { ContentSectionContainerComponent } from '../../../shared/components/content-section-container/content-section-container.component';
 import { NewsCarouselComponent } from './news-carousel/news-carousel.component';
 import { NgIf } from '@angular/common';
 import { NewsSection } from '../../../core/models/news/newsSection';
@@ -11,7 +11,7 @@ import config from '../../../../../config.json';
   standalone: true,
   imports: [
     ContentSectionComponent,
-    ContainerComponent,
+    ContentSectionContainerComponent,
     NewsCarouselComponent,
     NgIf
   ],
@@ -24,6 +24,4 @@ export class NewsSectionComponent {
   public get displaySection() {
     return this.newsSection && this.newsSection.title && this.newsSection.news;
   }
-
-  protected readonly config = config;
 }
