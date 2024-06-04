@@ -4,6 +4,7 @@ import { ContainerComponent } from '../../../shared/components/conteiner/contain
 import { NewsCarouselComponent } from './news-carousel/news-carousel.component';
 import { NgIf } from '@angular/common';
 import { NewsSection } from '../../../core/models/news/newsSection';
+import config from '../../../../../config.json';
 
 @Component({
   selector: 'app-news-section',
@@ -23,4 +24,6 @@ export class NewsSectionComponent {
   public get displaySection() {
     return this.newsSection && this.newsSection.title && this.newsSection.news;
   }
+
+  protected readonly config = config;
 }

@@ -1,5 +1,6 @@
 <app-content-section *ngIf="displaySection">
   <app-container>
+    <h2 class="title">{{newsSection.title}}</h2>
     <app-news-carousel [newsList]="newsSection.news"/>
   </app-container>
 </app-content-section>
