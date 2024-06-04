@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 
-import { Poster } from '../../../core/models/poster';
+import { Poster } from '../../../../core/models/poster';
 import { NgOptimizedImage } from '@angular/common';
 
 @Component({

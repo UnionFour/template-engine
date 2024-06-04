@@ -1,0 +1,24 @@
+.posters-carousel {
+  position: relative;
+  display: flex;
+
+  &__button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 999;
+
+    &--previous {
+      left: 20px;
+    }
+
+    &--next {
+      right: 20px;
+    }
+  }
+}
+
+
+
+
+

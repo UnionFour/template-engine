@@ -1,0 +1,33 @@
+<div
+  class="posters-carousel"
+>
+  <button
+    *ngIf="showButtons"
+    appearance="custom"
+    icon="tuiIconChevronLeftLarge"
+    title="Previous"
+    tuiIconButton
+    type="button"
+    class="posters-carousel__button posters-carousel__button--previous"
+    (click)="carousel.prev()"
+  ></button>
+  <tui-carousel
+    #carousel
+    [itemsCount]="itemsCount"
+  >
+    @for (poster of posters; track poster.title) {
+      <app-poster-card *tuiItem [poster]="poster"/>
+    }
+  </tui-carousel>
+  <button
+    *ngIf="showButtons"
+    appearance="custom"
+    icon="tuiIconChevronRightLarge"
+    title="Next"
+    tuiIconButton
+    type="button"
+    class="posters-carousel__button posters-carousel__button--next"
+    (click)="carousel.next()"
+  ></button>
+</div>
+

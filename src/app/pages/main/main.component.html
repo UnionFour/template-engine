@@ -14,13 +14,7 @@
   <section class="content-section">
     <div class="content-section__container">
       <h2 class="title content-section__title">Афиши</h2>
-      <ul class="posters-list">
-        @for (poster of postersList; track poster.title) {
-          <li>
-            <app-poster-card [poster]="poster"/>
-          </li>
-        }
-      </ul>
+      <app-posters-carousel [posters]="postersList"/>
     </div>
   </section>
   <section class="content-section">
