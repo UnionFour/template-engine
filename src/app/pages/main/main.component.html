@@ -3,18 +3,7 @@
   <app-about-section [aboutSection]="config.main"/>
   <app-news-section [newsSection]="config.news"/>
   <app-map-section [mapSection]="config.addresses"/>
-  <section class="content-section">
-    <div class="content-section__container">
-      <h2 class="title content-section__title">Наши тренеры</h2>
-      <ul class="coaches-list">
-        @for (coach of coacheslist; track coach.name) {
-          <li>
-            <app-coach-card [coach]="coach"/>
-          </li>
-        }
-      </ul>
-    </div>
-  </section>
+  <app-instructors-section [instructorSection]="config.instructors"/>
   <section class="content-section">
     <div class="content-section__container">
       <h2 class="title content-section__title">Наши услуги</h2>

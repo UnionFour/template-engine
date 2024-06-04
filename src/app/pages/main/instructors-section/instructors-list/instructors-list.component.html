@@ -1,0 +1,10 @@
+<ul class="instructors-list">
+  @for (instructor of instructorsList; track instructor.name; let index = $index) {
+    <li>
+      <app-instructor-card
+        [instructor]="instructor"
+        [instructorIndex]="index"
+      />
+    </li>
+  }
+</ul>

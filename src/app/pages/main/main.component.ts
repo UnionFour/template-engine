@@ -2,7 +2,7 @@ import { Component, DestroyRef, inject, OnInit } from '@angular/core';
 import { LayoutComponent } from './layout/layout.component';
 import { NgIf, NgOptimizedImage } from '@angular/common';
 import { coacheslist, posterslist, servicesList } from '../../core/mock';
-import { CoachCardComponent } from './coach-card/coach-card.component';
+import { InstructorCardComponent } from './instructors-section/instructor-card/instructor-card.component';
 import { ServiceCardComponent } from './service-card/service-card.component';
 import { MapModule } from "./map-section/map/map.module";
 import  config  from '../../../../config.json';
@@ -12,6 +12,7 @@ import { NewsSectionComponent } from './news-section/news-section.component';
 import { AboutSectionComponent } from './about-section/about-section.component';
 import { HeroImageSectionComponent } from './hero-image-section/hero-image-section.component';
 import { MapSectionComponent } from './map-section/map-section.component';
+import { InstructorsSectionComponent } from './instructors-section/instructors-section.component';
 
 @Component({
   selector: 'app-main',
@@ -20,7 +21,7 @@ import { MapSectionComponent } from './map-section/map-section.component';
     LayoutComponent,
     NgOptimizedImage,
     NewsCardComponent,
-    CoachCardComponent,
+    InstructorCardComponent,
     ServiceCardComponent,
     MapModule,
     NewsCarouselComponent,
@@ -28,7 +29,8 @@ import { MapSectionComponent } from './map-section/map-section.component';
     NewsSectionComponent,
     AboutSectionComponent,
     HeroImageSectionComponent,
-    MapSectionComponent
+    MapSectionComponent,
+    InstructorsSectionComponent
   ],
   templateUrl: './main.component.html',
   styleUrl: './main.component.scss'

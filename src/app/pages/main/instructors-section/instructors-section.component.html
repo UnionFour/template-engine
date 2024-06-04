@@ -1,0 +1,10 @@
+@if (displaySection) {
+  <app-content-section>
+    <app-container>
+      <h2 class="title">{{instructorSection.title}}</h2>
+      <app-instructors-list
+        [instructorsList]="instructorSection.instructors"
+      />
+    </app-container>
+  </app-content-section>
+}
