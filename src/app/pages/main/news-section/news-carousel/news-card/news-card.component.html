@@ -3,6 +3,7 @@
     [src]="'assets/images/news/' + newsIndex + '.jpg'"
     alt="news img"
   >
-  <h3 class="poster-card__title">{{news.title}}</h3>
-  <p class="poster-card__text">{{news.text}}</p>
+  <h3 class="news-card__title">{{news.title}}</h3>
+  <div [innerHtml]="news.text"></div>
+<!--  <p class="poster-card__text">{{news.text}}</p>-->
 </div>
