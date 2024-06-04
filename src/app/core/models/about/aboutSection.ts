@@ -1,4 +1,4 @@
-export type MainSection = {
+export type AboutSection = {
   "title": string,
   "text": string,
 }

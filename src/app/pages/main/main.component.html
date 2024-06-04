@@ -1,19 +1,8 @@
 <app-layout>
-  <section>
-    <img
-      src="https://storage.yandexcloud.net/web-constructor-union-4/hero.jpg"
-      class="hero-image"
-    >
-  </section>
-  <app-main-section [mainSection]="config.main"/>
+  <app-hero-image-section/>
+  <app-about-section [aboutSection]="config.main"/>
   <app-news-section [newsSection]="config.news"/>
-  <section class="content-section">
-    <div class="content-section__container">
-      <h2 class="title content-section__title">Мы на карте</h2>
-<!--      <img src="assets/images/map.jpg">-->
-      <app-map></app-map>
-    </div>
-  </section>
+  <app-map-section [mapSection]="config.addresses"/>
   <section class="content-section">
     <div class="content-section__container">
       <h2 class="title content-section__title">Наши тренеры</h2>

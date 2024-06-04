@@ -4,7 +4,6 @@ import { ContentSectionContainerComponent } from '../../../shared/components/con
 import { NewsCarouselComponent } from './news-carousel/news-carousel.component';
 import { NgIf } from '@angular/common';
 import { NewsSection } from '../../../core/models/news/newsSection';
-import config from '../../../../../config.json';
 
 @Component({
   selector: 'app-news-section',
@@ -22,6 +21,7 @@ export class NewsSectionComponent {
   @Input() public newsSection!: NewsSection;
 
   public get displaySection() {
-    return this.newsSection && this.newsSection.title && this.newsSection.news;
+    return this.newsSection && this.newsSection.title
+      && this.newsSection.news;
   }
 }

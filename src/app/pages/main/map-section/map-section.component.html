@@ -1,0 +1,8 @@
+@if (displaySection) {
+  <app-content-section>
+    <app-container>
+      <h2 class="title">{{mapSection.title}}</h2>
+      <app-map [addresses]="mapSection.addresses"/>
+    </app-container>
+  </app-content-section>
+}

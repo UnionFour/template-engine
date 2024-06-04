@@ -4,12 +4,14 @@ import { NgIf, NgOptimizedImage } from '@angular/common';
 import { coacheslist, posterslist, servicesList } from '../../core/mock';
 import { CoachCardComponent } from './coach-card/coach-card.component';
 import { ServiceCardComponent } from './service-card/service-card.component';
-import { MapModule } from "./map/map.module";
+import { MapModule } from "./map-section/map/map.module";
 import  config  from '../../../../config.json';
 import { NewsCardComponent } from './news-section/news-carousel/news-card/news-card.component';
 import { NewsCarouselComponent } from './news-section/news-carousel/news-carousel.component';
 import { NewsSectionComponent } from './news-section/news-section.component';
-import { MainSectionComponent } from './about-section/main-section.component';
+import { AboutSectionComponent } from './about-section/about-section.component';
+import { HeroImageSectionComponent } from './hero-image-section/hero-image-section.component';
+import { MapSectionComponent } from './map-section/map-section.component';
 
 @Component({
   selector: 'app-main',
@@ -24,7 +26,9 @@ import { MainSectionComponent } from './about-section/main-section.component';
     NewsCarouselComponent,
     NgIf,
     NewsSectionComponent,
-    MainSectionComponent
+    AboutSectionComponent,
+    HeroImageSectionComponent,
+    MapSectionComponent
   ],
   templateUrl: './main.component.html',
   styleUrl: './main.component.scss'

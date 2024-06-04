@@ -5,11 +5,10 @@ import {
 } from '../../../shared/components/content-section-container/content-section-container.component';
 import { NewsCarouselComponent } from '../news-section/news-carousel/news-carousel.component';
 import { NgIf } from '@angular/common';
-import { MainSection } from '../../../core/models/about/mainSection';
-import config from '../../../../../config.json';
+import { AboutSection } from '../../../core/models/about/aboutSection';
 
 @Component({
-  selector: 'app-main-section',
+  selector: 'app-about-section',
   standalone: true,
   imports: [
     ContentSectionComponent,
@@ -17,15 +16,14 @@ import config from '../../../../../config.json';
     NewsCarouselComponent,
     NgIf
   ],
-  templateUrl: './main-section.component.html',
-  styleUrl: './main-section.component.scss'
+  templateUrl: './about-section.component.html',
+  styleUrl: './about-section.component.scss'
 })
-export class MainSectionComponent {
-  @Input() public mainSection!: MainSection;
+export class AboutSectionComponent {
+  @Input() public aboutSection!: AboutSection;
 
   public get displaySection() {
-    return this.mainSection && this.mainSection.title && this.mainSection.text;
+    return this.aboutSection && this.aboutSection.title
+      && this.aboutSection.text;
   }
-
-  protected readonly config = config;
 }
