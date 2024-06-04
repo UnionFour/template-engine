@@ -1,30 +1,53 @@
-import { Component } from '@angular/core';
+import { Component, DestroyRef, inject, OnInit } from '@angular/core';
 import { LayoutComponent } from './layout/layout.component';
-import { NgOptimizedImage } from '@angular/common';
-import { PosterCardComponent } from './posters-carousel/poster-card/poster-card.component';
+import { NgIf, NgOptimizedImage } from '@angular/common';
 import { coacheslist, posterslist, servicesList } from '../../core/mock';
 import { CoachCardComponent } from './coach-card/coach-card.component';
 import { ServiceCardComponent } from './service-card/service-card.component';
 import { MapModule } from "./map/map.module";
-import { PostersCarouselComponent } from './posters-carousel/posters-carousel.component';
+import  config  from '../../../../config.json';
+import { NewsCardComponent } from './news-section/news-carousel/news-card/news-card.component';
+import { NewsCarouselComponent } from './news-section/news-carousel/news-carousel.component';
+import { NewsSectionComponent } from './news-section/news-section.component';
 
 @Component({
-    selector: 'app-main',
-    standalone: true,
+  selector: 'app-main',
+  standalone: true,
   imports: [
     LayoutComponent,
     NgOptimizedImage,
-    PosterCardComponent,
+    NewsCardComponent,
     CoachCardComponent,
     ServiceCardComponent,
     MapModule,
-    PostersCarouselComponent
+    NewsCarouselComponent,
+    NgIf,
+    NewsSectionComponent
   ],
-    templateUrl: './main.component.html',
-    styleUrl: './main.component.scss'
+  templateUrl: './main.component.html',
+  styleUrl: './main.component.scss'
 })
-export class MainComponent {
-    public postersList = posterslist;
-    protected readonly coacheslist = coacheslist;
-    protected readonly servicesList = servicesList;
+export class MainComponent implements OnInit{
+  constructor() {}
+
+  private destroyRef = inject(DestroyRef);
+
+  ngOnInit() {
+    // this.dataService.getData().pipe(
+    //   takeUntilDestroyed(this.destroyRef)
+    // ).subscribe((data) => {
+    //   console.log(data)
+    //   this.data = data
+    // } )
+
+    console.log(config)
+  }
+
+  // public data: any = data;
+
+  public postersList = posterslist;
+  protected readonly coacheslist = coacheslist;
+  protected readonly servicesList = servicesList;
+
+  protected readonly config = config;
 }

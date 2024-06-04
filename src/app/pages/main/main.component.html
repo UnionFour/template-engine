@@ -5,18 +5,13 @@
       class="hero-image"
     >
   </section>
-  <section class="content-section">
+  <section *ngIf="config.main" class="content-section">
     <div class="content-section__container">
-      <h2 class="title title--bold content-section__title">О нас</h2>
-      <h3 class="about-subtitle content-section__about-subtitle">Начните бегать легко и с удовольствием! Новичкам поставим технику бега и поможем комфортно пробежать первые пять километров, а любителей подготовим к самым ярким забегам по всему миру</h3>
+      <h2 class="title title--bold content-section__title">{{config.main.title}}</h2>
+      <h3 class="about-subtitle content-section__about-subtitle">{{config.main.text}}</h3>
     </div>
   </section>
-  <section class="content-section">
-    <div class="content-section__container">
-      <h2 class="title content-section__title">Афиши</h2>
-      <app-posters-carousel [posters]="postersList"/>
-    </div>
-  </section>
+  <app-news-section [newsSection]="config.news"/>
   <section class="content-section">
     <div class="content-section__container">
       <h2 class="title content-section__title">Мы на карте</h2>

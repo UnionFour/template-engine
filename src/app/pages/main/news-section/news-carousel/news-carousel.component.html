@@ -1,5 +1,5 @@
 <div
-  class="posters-carousel"
+  class="news-carousel"
 >
   <button
     *ngIf="showButtons"
@@ -8,15 +8,15 @@
     title="Previous"
     tuiIconButton
     type="button"
-    class="posters-carousel__button posters-carousel__button--previous"
+    class="news-carousel__button news-carousel__button--previous"
     (click)="carousel.prev()"
   ></button>
   <tui-carousel
     #carousel
     [itemsCount]="itemsCount"
   >
-    @for (poster of posters; track poster.title) {
-      <app-poster-card *tuiItem [poster]="poster"/>
+    @for (news of newsList; track news.title; let newsIndex = $index) {
+      <app-news-card *tuiItem [news]="news" [newsIndex]="newsIndex"/>
     }
   </tui-carousel>
   <button
@@ -26,7 +26,7 @@
     title="Next"
     tuiIconButton
     type="button"
-    class="posters-carousel__button posters-carousel__button--next"
+    class="news-carousel__button news-carousel__button--next"
     (click)="carousel.next()"
   ></button>
 </div>

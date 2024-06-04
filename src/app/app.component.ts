@@ -13,5 +13,5 @@ import { MainComponent } from './pages/main/main.component';
     providers: [{provide: TUI_SANITIZER, useClass: NgDompurifySanitizer}]
 })
 export class AppComponent {
-  title = 'template-engine';
+
 }

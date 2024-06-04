@@ -1,12 +1,12 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { TuiCarouselModule, TuiIslandModule, TuiMarkerIconModule } from '@taiga-ui/kit';
 import { TuiButtonModule, TuiLoaderModule } from '@taiga-ui/core';
-import { PosterCardComponent } from './poster-card/poster-card.component';
-import { Poster } from '../../../core/models/poster';
+import { NewsCardComponent } from './news-card/news-card.component';
 import { NgIf } from '@angular/common';
+import { News } from '../../../../core/models/news/news';
 
 @Component({
-  selector: 'app-posters-carousel',
+  selector: 'app-news-carousel',
   standalone: true,
   imports: [
     TuiIslandModule,
@@ -14,23 +14,23 @@ import { NgIf } from '@angular/common';
     TuiMarkerIconModule,
     TuiButtonModule,
     TuiCarouselModule,
-    PosterCardComponent,
+    NewsCardComponent,
     NgIf
   ],
-  templateUrl: './posters-carousel.component.html',
-  styleUrl: './posters-carousel.component.scss'
+  templateUrl: './news-carousel.component.html',
+  styleUrl: './news-carousel.component.scss'
 })
-export class PostersCarouselComponent{
-  @Input() posters: Poster[] = [];
+export class NewsCarouselComponent {
+  @Input() public newsList: News[] = [];
 
   private itemsCountDefault = 3;
 
   public get showButtons() {
-    return this.posters.length > this.itemsCountDefault
+    return this.newsList.length > this.itemsCountDefault
   }
-  
+
   public get itemsCount() {
-    return this.posters.length < this.itemsCountDefault ? this.posters.length
+    return this.newsList.length < this.itemsCountDefault ? this.newsList.length
       : this.itemsCountDefault;
   }
 }

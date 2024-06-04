@@ -1,4 +1,4 @@
-.posters-carousel {
+.news-carousel {
   position: relative;
   display: flex;
 
@@ -7,6 +7,7 @@
     top: 50%;
     transform: translateY(-50%);
     z-index: 999;
+    color: var(--color-light);
 
     &--previous {
       left: 20px;
