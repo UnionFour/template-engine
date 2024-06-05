@@ -15,7 +15,7 @@ export class MapComponent implements OnInit {
     ngOnInit() {
         this.points = this.addresses.map((address): Point => {
             return {
-                coords: [+address.alt, +address.lat],
+                coords: [address.alt, address.lat],
                 properties: {
                     balloonContentBody: [
                       '<address>',
