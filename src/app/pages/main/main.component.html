@@ -1,6 +1,21 @@
 <app-layout>
+<<<<<<< HEAD
   <app-hero-image-section/>
   <app-about-section [aboutSection]="config.main"/>
+=======
+  <section>
+    <img
+      src="https://storage.yandexcloud.net/web-constructor-union-4/hero.jpg"
+      class="hero-image"
+    >
+  </section>
+  <section *ngIf="config.main" class="content-section">
+    <div class="content-section__container">
+      <h2 class="title title--bold content-section__title">{{config.main.title}}</h2>
+      <h3 class="about-subtitle content-section__about-subtitle">{{config.main.text}}</h3>
+    </div>
+  </section>
+>>>>>>> parent of f5fee1a (added inerHTML to the about us block)
   <app-news-section [newsSection]="config.news"/>
   <app-map-section [mapSection]="config.addresses"/>
   <app-instructors-section [instructorSection]="config.instructors"/>
