@@ -1,6 +1,6 @@
 export type Address = {
   description: string,
   address: string,
-  alt: number,
-  lat: number
+  alt: string,
+  lat: string
 }

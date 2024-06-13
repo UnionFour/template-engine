@@ -1,4 +1,11 @@
 export type News = {
   title: string,
-  text: string,
+  bigText: string,
+  littleText: string,
+  date: string,
+  address: string,
+  price: number,
+  maxPlaceCount: number,
+  busyPlaceCount: number
+  phone: string,
 };

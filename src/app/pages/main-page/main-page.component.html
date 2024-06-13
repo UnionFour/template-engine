@@ -1,0 +1,20 @@
+<app-layout>
+  @if (dataService.displayHeroImageSection) {
+    <app-hero-image-section/>
+  }
+  @if (dataService.displayAboutSection) {
+    <app-about-section [aboutSection]="this.dataService.data.main"/>
+  }
+  @if (dataService.displayNewsSection) {
+    <app-news-section [newsSection]="this.dataService.data.news"/>
+  }
+  @if (dataService.displayMapSection) {
+    <app-map-section [mapSection]="this.dataService.data.addresses"/>
+  }
+  @if (dataService.displayInstructorsSection) {
+    <app-instructors-section [instructorSection]="this.dataService.data.instructors"/>
+  }
+  @if (dataService.displayServicesSection) {
+    <app-services-section [servicesSection]="this.dataService.data.services"/>
+  }
+</app-layout>

@@ -1,0 +1,49 @@
+.news-card {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  color: var(--color-light);
+  box-shadow: var(--card-box-shadow);
+  max-width: 356px;
+  height: 390px;
+  padding: var(--card-indent);
+
+  &__img-link {
+    overflow: hidden;
+    cursor: pointer;
+  }
+
+  &__img {
+    width: 308px;
+    height: 191px;
+    object-fit: cover;
+  }
+
+  &__img:hover {
+    transform: scale(1.02);
+  }
+
+  &__title {
+    font-size: var(--font-size-m);
+    font-weight: var(--font-weight-medium);
+    line-height: var(--line-height-m);
+    color: var(--color-dark);
+    cursor: pointer;
+  }
+
+  &__date {
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-medium);
+    line-height: var(--line-height-xs);
+    color: var(--color-dark-gray);
+  }
+
+  &__text {
+    //font-size: var(--font-size-xs);
+    //font-weight: var(--font-weight-medium);
+    //line-height: var(--line-height-xs);
+    color: var(--color-dark);
+    max-height: 80px;
+    overflow: hidden;
+  }
+}

@@ -1,0 +1,45 @@
+<button
+  appearance="icon"
+  icon="tuiIconChevronLeftLarge"
+  tuiIconButton
+  type="button"
+  (click)="goMain()"
+  class="button-back"
+></button>
+<app-content-section>
+  <app-container>
+    <div class="poster-page">
+      @if (poster$ | async; as poster) {
+        <img [src]="imgPath" class="poster-page__img">
+        <h1 class="poster-page__title">{{poster.title}}</h1>
+        <div class="poster-page__address-block">
+          <span class="poster-page__address">{{poster.address}}</span>
+          <time class="poster-page__data">{{poster.date}}</time>
+        </div>
+        <div [innerHTML]="poster.bigText" class="poster-page__text"></div>
+        <div class="poster-page__info-block">
+          <div class="poster-page__info">
+            <span class="poster-page__info-label">Осталось мест / всего мест:</span>
+            <span class="poster-page__info-text">{{poster.maxPlaceCount - poster.busyPlaceCount}} / {{poster.maxPlaceCount}}</span>
+          </div>
+          <div class="poster-page__info">
+            <span class="poster-page__info-label">
+              Цена:
+            </span>
+            @if(poster.price) {
+              <span class="poster-page__info-text">{{poster.price}}р</span>
+            } @else {
+              <span class="poster-page__info-text">Бесплатно</span>
+            }
+          </div>
+          <div class="poster-page__info">
+            <span class="poster-page__info-label">
+              Телефон для справок:
+            </span>
+            <a [href]="'tel:' + poster.phone" class="poster-page__info-text">{{poster.phone}}</a>
+          </div>
+        </div>
+      }
+    </div>
+  </app-container>
+</app-content-section>

@@ -1,0 +1,13 @@
+<div class="instructor-card">
+  <img
+    [src]="'assets/instructors' + instructorIndex + '.jpg'"
+    alt="instructor image"
+    class="instructor-card__img"
+  >
+  <div class="instructor-card__info-block">
+    <h3 class="instructor-card__name">{{instructor.name}}</h3>
+    <p class="instructor-card__specialization">{{instructor.sportType}}</p>
+    <div [innerHTML]="instructor.info" class="instructor-card__description"></div>
+  </div>
+</div>
+
